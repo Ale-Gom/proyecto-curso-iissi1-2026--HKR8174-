@@ -52,6 +52,17 @@ para [razón]
 
 #### 4.1.2. Reglas de negocio
 
+RN-01 – Stock suficiente: la cantidad de una línea de pedido no puede superar el stock del producto en el momento de la compra. Al pagar el pedido, el stock se reduce en esa cantidad.
+
+RN-02 – Participantes y cartas válidos: el ofertante y el receptor de un intercambio deben ser usuarios distintos. Toda carta incluida debe pertenecer a uno de los dos, y cada uno debe aportar al menos una carta.
+
+RN-03 – Bloqueo de cartas: solo se pueden añadir cartas marcadas como disponibles para tradeo. Mientras el intercambio esté pendiente, aceptado o enviado, sus cartas pasan a no disponibles y no pueden entrar en otro intercambio. Si se rechaza, vuelven a estar disponibles.
+
+RN-04 – Transferencia de propiedad: cuando un intercambio pasa a "completado", cada carta pasa a ser propiedad del otro participante. Un intercambio solo puede marcarse como completado si ambos códigos de tracking están registrados.
+
+RN-05 – Valoración y reputación: cada participante solo puede valorar al otro (de 1 a 5) una vez el intercambio esté completado. La reputación de un usuario es la media de las valoraciones que ha recibido.
+
+
 ##### R.N.01. Título regla negocio
 
 Descripción de la regla de negocio.
