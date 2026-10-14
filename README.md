@@ -87,20 +87,34 @@ RG-08 – Administración. El sistema deberá permitir al administrador de la ti
 
 ### 3.2. Usuarios del sistema
 
-1. Entrenador (usuario registrado). Es el usuario principal del sistema. Puede: 
+1. Entrenador (usuario registrado). Es el usuario principal del sistema. Puede:
+   
   -Consultar la tienda (productos, precios y disponibilidad), el catálogo de expansiones y cartas y las cartas que otros usuarios ofrecen para intercambio.
+  
   -Comprar productos de la tienda y consultar el estado de sus pedidos.
+  
   -Gestionar su carpeta virtual: registrar sus cartas e indicar su estado, su idioma y si están disponibles para intercambio.
+  
   -Proponer intercambios a otros entrenadores, aceptar o rechazar los que recibe, registrar los códigos de envío y valorar a la otra parte al completarlos.
+  
   -Consultar su saldo de monedero y su reputación de tradeo.
+  
   Dentro de este rol hay tres perfiles típicos, que usan el sistema de forma distinta aunque tengan los mismos permisos:
+  
     Coleccionista: busca completar expansiones y conseguir cartas raras concretas, así que usa sobre todo el catálogo y los intercambios.
+    
     Jugador competitivo: construye mazos para torneos, así que le interesan las expansiones legales y conseguir cartas concretas rápido.
+    
     Comprador ocasional: familias o jugadores nuevos que compran sobre todo producto sellado y accesorios.
+    
 2. Administrador. Es el dueño o un empleado de la tienda (el cliente del proyecto). Puede:
+   
   -Gestionar el catálogo de expansiones y cartas, que solo él puede modificar.
+  
   -Gestionar los productos de la tienda, sus precios y su stock.
+  
   -Gestionar los pedidos y actualizar su estado (enviado, entregado).
+  
   -Mediar en los intercambios en disputa y decidir cómo se resuelven.
 
 ## 4. Catálogo de requisitos
