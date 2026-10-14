@@ -220,16 +220,77 @@ Como cliente o visitante de la tienda quiero listar los productos disponibles fi
 
 #### 4.1.1. Requisitos de información
 
-##### R.I.01. Título requisito de información
+**R.I.01. Información de los usuarios**
+Como administrador quiero que el sistema almacene la información de los entrenadores registrados (nombre, email, contraseña, dirección de envío, saldo de monedero y reputación de tradeo) para poder identificarlos, enviarles sus pedidos y gestionar sus intercambios.
+Prueba de aceptación
+* Se comprueba que se puede registrar un usuario con todos sus datos y consultarlos después.
+* Se comprueba que no se puede registrar un usuario sin nombre, email o contraseña.
+* Se comprueba que no se pueden registrar dos usuarios con el mismo email.
+* Se comprueba que el saldo de monedero de un usuario nuevo es 0 y nunca puede ser negativo.
+* Se comprueba que la reputación de tradeo no se introduce a mano, sino que se calcula a partir de las valoraciones recibidas.
 
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+**R.I.02. Información de los productos de la tienda**
+Como administrador quiero que el sistema almacene los productos que vende la tienda (nombre, precio, stock e imagen) y su tipo (sellado, accesorio o carta suelta) para poder ofrecerlos a la venta online.
+Prueba de aceptación
+* Se comprueba que se puede dar de alta un producto de cada tipo con todos sus datos.
+* Se comprueba que todo producto pertenece a uno solo de los tres tipos.
+* Se comprueba que no se puede registrar un producto con precio o stock negativos.
+* Se comprueba que de un producto sellado se guarda el número de sobres y, opcionalmente, la expansión a la que pertenece.
+* Se comprueba que de un accesorio se guarda su categoría.
+* Se comprueba que de una carta suelta se guardan la carta del catálogo a la que corresponde, su estado de conservación y su idioma.
 
-**Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- ...
+**R.I.03. Información de los pedidos**
+Como entrenador quiero que el sistema almacene mis pedidos (número, fecha, total y estado) y los productos que incluye cada uno, con su cantidad y precio unitario, para poder consultar mis compras y su estado.
+Prueba de aceptación
+* Se comprueba que todo pedido pertenece a un único usuario.
+* Se comprueba que no se puede registrar un pedido sin al menos una línea de pedido.
+* Se comprueba que cada línea de pedido corresponde a un único producto, con una cantidad mayor que 0.
+* Se comprueba que el estado del pedido solo puede ser pagado, enviado o entregado.
+* Se comprueba que el total del pedido es la suma de cantidad × precio unitario de todas sus líneas.
+* Se comprueba que al eliminar un pedido se eliminan también sus líneas.
+
+**R.I.04. Información de las expansiones**
+Como entrenador quiero que el sistema almacene las expansiones del juego (nombre, fecha de lanzamiento, icono y si es legal en torneos) para poder consultar las cartas de cada una y saber cuáles puedo usar en torneo.
+Prueba de aceptación
+* Se comprueba que se puede registrar una expansión con todos sus datos.
+* Se comprueba que no se pueden registrar dos expansiones con el mismo nombre.
+* Se comprueba que el campo de legalidad en torneos solo admite sí o no.
+* Se comprueba que solo el administrador puede registrar o modificar expansiones.
+
+**R.I.05. Información del catálogo de cartas**
+Como coleccionista quiero que el sistema almacene todas las cartas que existen (nombre, número de colección, rareza, tipo de energía e imagen) y la expansión a la que pertenecen para tener una referencia común con la que identificar cada carta.
+Prueba de aceptación
+* Se comprueba que toda carta del catálogo pertenece a una única expansión.
+* Se comprueba que no puede haber dos cartas con el mismo número de colección en la misma expansión.
+* Se comprueba que la rareza solo admite los valores definidos (común, infrecuente, rara, rara doble, ilustración rara, ilustración especial, hiper rara).
+* Se comprueba que el tipo de energía es opcional, ya que las cartas de entrenador y de energía no lo tienen.
+* Se comprueba que al eliminar una expansión se eliminan también sus cartas del catálogo.
+
+**R.I.06. Información de la colección de cada usuario**
+Como entrenador quiero que el sistema almacene las cartas físicas que tengo (qué carta del catálogo es, su estado de conservación, su idioma y si está disponible para intercambio) para gestionar mi colección y ofrecer mis cartas repetidas.
+Prueba de aceptación
+* Se comprueba que toda carta física pertenece a un único usuario y corresponde a una única carta del catálogo.
+* Se comprueba que un usuario puede tener varias copias de la misma carta, cada una registrada por separado.
+* Se comprueba que el estado de conservación solo admite mint, near mint, lightly played o damaged.
+* Se comprueba que el idioma solo admite los valores definidos.
+* Se comprueba que una carta nueva se registra por defecto como no disponible para intercambio.
+
+**R.I.07. Información de los intercambios**
+Como entrenador quiero que el sistema almacene los intercambios que propongo o recibo (fecha de creación, estado, cartas incluidas, usuario ofertante, usuario receptor y códigos de envío de cada parte) para poder seguir cada trato hasta completarlo.
+Prueba de aceptación
+* Se comprueba que todo intercambio tiene exactamente un ofertante y un receptor, y que son usuarios distintos.
+* Se comprueba que un intercambio incluye al menos una carta de cada participante y ninguna carta de otro usuario.
+* Se comprueba que el estado solo admite pendiente, aceptado, rechazado, enviado, completado o disputa.
+* Se comprueba que los códigos de envío son opcionales y solo pueden registrarse a partir del estado aceptado.
+* Se comprueba que una misma carta no puede estar a la vez en dos intercambios activos.
+
+**R.I.08. Información de las valoraciones de los intercambios**
+Como entrenador quiero que el sistema almacene la valoración que cada participante da al otro en un intercambio para saber si un usuario es de fiar antes de tradear con él.
+Prueba de aceptación
+* Se comprueba que la valoración es un número entero entre 1 y 5.
+* Se comprueba que solo se puede valorar un intercambio en estado completado.
+* Se comprueba que cada participante solo puede valorar una vez al otro en cada intercambio.
+* Se comprueba que la reputación de un usuario se actualiza con la media de todas las valoraciones que ha recibido.
 
 #### 4.1.2. Reglas de negocio
 
