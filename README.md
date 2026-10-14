@@ -167,17 +167,6 @@ Como cliente o visitante de la tienda quiero listar los productos disponibles fi
 * Comprobar que las cartas físicas incluidas en el trato aparecen agrupadas y diferenciadas claramente según a qué participante pertenecen originalmente.
 * Verificar que, si el intercambio está en estado "Enviado" o "Completado", se visualizan los códigos de *tracking* de ambos envíos y las valoraciones otorgadas entre los usuarios.
 
-#### R.F.01. Título requisito funcional
-
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
-
-**Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
 
 #### 4.1.1. Requisitos de información
 
