@@ -69,7 +69,39 @@ Nota: Aquí se meten las cartas de la tabla Carta_Usuario que están en juego en
 
 ### 3.1. Requisitos generales
 
+RG-01 – Gestión de usuarios. El sistema deberá permitir registrar y gestionar a los usuarios (entrenadores), con sus datos personales, su dirección de envío, su saldo de monedero y su reputación de tradeo.
+
+RG-02 – Gestión de la tienda online. El sistema deberá gestionar los productos que vende la tienda (producto sellado, accesorios y cartas sueltas), con su precio y su stock siempre actualizados.
+
+RG-03 – Gestión de pedidos. El sistema deberá permitir a los usuarios comprar productos de la tienda y registrar cada pedido con sus líneas, su total y su estado (pagado, enviado o entregado).
+
+RG-04 – Gestión del catálogo de cartas. El sistema deberá mantener un catálogo de referencia con todas las expansiones y las cartas que contienen, indicando qué expansiones son legales en torneo.
+
+RG-05 – Gestión de la colección personal. El sistema deberá permitir a cada usuario registrar sus cartas físicas en una carpeta virtual, indicando la carta del catálogo, su estado de conservación, su idioma y si está disponible para intercambio.
+
+RG-06 – Gestión de intercambios. El sistema deberá permitir a los usuarios proponer, aceptar o rechazar intercambios de cartas con otros usuarios, y hacer su seguimiento hasta completarlos, incluyendo los códigos de envío.
+
+RG-07 – Gestión de la confianza. El sistema deberá permitir que los usuarios se valoren tras completar un intercambio, y calcular con esas valoraciones la reputación de cada usuario.
+
+RG-08 – Administración. El sistema deberá permitir al administrador de la tienda gestionar el catálogo, los productos y los pedidos, y mediar en los intercambios que acaben en disputa.
+
 ### 3.2. Usuarios del sistema
+
+1. Entrenador (usuario registrado). Es el usuario principal del sistema. Puede: 
+  -Consultar la tienda (productos, precios y disponibilidad), el catálogo de expansiones y cartas y las cartas que otros usuarios ofrecen para intercambio.
+  -Comprar productos de la tienda y consultar el estado de sus pedidos.
+  -Gestionar su carpeta virtual: registrar sus cartas e indicar su estado, su idioma y si están disponibles para intercambio.
+  -Proponer intercambios a otros entrenadores, aceptar o rechazar los que recibe, registrar los códigos de envío y valorar a la otra parte al completarlos.
+  -Consultar su saldo de monedero y su reputación de tradeo.
+  Dentro de este rol hay tres perfiles típicos, que usan el sistema de forma distinta aunque tengan los mismos permisos:
+    Coleccionista: busca completar expansiones y conseguir cartas raras concretas, así que usa sobre todo el catálogo y los intercambios.
+    Jugador competitivo: construye mazos para torneos, así que le interesan las expansiones legales y conseguir cartas concretas rápido.
+    Comprador ocasional: familias o jugadores nuevos que compran sobre todo producto sellado y accesorios.
+2. Administrador. Es el dueño o un empleado de la tienda (el cliente del proyecto). Puede:
+  -Gestionar el catálogo de expansiones y cartas, que solo él puede modificar.
+  -Gestionar los productos de la tienda, sus precios y su stock.
+  -Gestionar los pedidos y actualizar su estado (enviado, entregado).
+  -Mediar en los intercambios en disputa y decidir cómo se resuelven.
 
 ## 4. Catálogo de requisitos
 
