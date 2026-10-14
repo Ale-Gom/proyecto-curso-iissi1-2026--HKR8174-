@@ -85,6 +85,8 @@ Como cliente o visitante de la tienda quiero listar los productos disponibles fi
 * Comprobar que al definir un precio mínimo y máximo solo se devuelven productos cuyo importe se encuentre dentro de dicho rango (ambos inclusive).
 * Verificar que el listado resultante permite ordenarse de forma ascendente y descendente según el atributo precio.
 
+---
+
 **RF-02: Detalle de un producto**
 **Como** cliente o visitante **quiero** consultar la ficha detallada de un producto (nombre, precio, stock, imagen y, si es carta suelta, sus datos de catálogo, estado e idioma) **para** evaluar sus características exactas antes de añadirlo al carrito.
 **Prueba de aceptación:**
@@ -92,6 +94,8 @@ Como cliente o visitante de la tienda quiero listar los productos disponibles fi
 * Comprobar que para cualquier producto (sellado, accesorio o carta suelta) se visualizan correctamente el nombre, el precio actual, el stock disponible y la imagen.
 * Verificar que, si el producto es de tipo "Carta suelta", se muestran adicionalmente los datos asociados de la carta del catálogo, su estado de conservación y su idioma.
 * Comprobar que, si el producto es "Sellado" o "Accesorio", los campos exclusivos de carta suelta no se muestran en la vista.
+
+---
 
 **RF-03: Listado de expansiones (Sets)**
 **Como** coleccionista o jugador competitivo **quiero** listar las expansiones ordenadas por fecha de lanzamiento y poder filtrar las que son legales en torneos **para** conocer la cronología de las colecciones e identificar qué sets puedo usar en el formato competitivo actual.
