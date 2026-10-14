@@ -1,6 +1,6 @@
 # Título Proyecto
 
-## Miembros del grupo LX-XXX-X (sustituir)
+## Miembros del grupo L3-ABS-1
 
 1. Apellidos, Nombre
 1. Apellidos, Nombre
