@@ -1,11 +1,11 @@
-# Título Proyecto
+# Tienda TCG Pokemon
 
 ## Miembros del grupo L3-ABS-1
 
-1. Apellidos, Nombre
-1. Apellidos, Nombre
-1. Apellidos, Nombre
-1. Apellidos, Nombre
+1. Portela Martín, Manuel
+1. López Madejón, Alejandro
+1. Gómez Astacio, Alejandro
+1. Maria Denti, Gianpaolo
 
 ## 1. Introducción al problema
 
