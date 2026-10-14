@@ -75,6 +75,98 @@ Nota: Aquí se meten las cartas de la tabla Carta_Usuario que están en juego en
 
 ### 4.1. Requisitos funcionales
 
+#### R.F.01. Catálogo de productos de la tienda
+
+Como cliente o visitante de la tienda quiero listar los productos disponibles filtrando por tipo (sellado, accesorio o carta suelta) y rango de precio, y ordenándolos por coste para encontrar artículos que se ajusten a mis intereses y presupuesto.
+
+##### Prueba de aceptación:
+
+* Verificar que al seleccionar el filtro de tipo (ej. "Sellado") la lista muestra únicamente productos pertenecientes a esa categoría.
+* Comprobar que al definir un precio mínimo y máximo solo se devuelven productos cuyo importe se encuentre dentro de dicho rango (ambos inclusive).
+* Verificar que el listado resultante permite ordenarse de forma ascendente y descendente según el atributo precio.
+
+**RF-02: Detalle de un producto**
+**Como** cliente o visitante **quiero** consultar la ficha detallada de un producto (nombre, precio, stock, imagen y, si es carta suelta, sus datos de catálogo, estado e idioma) **para** evaluar sus características exactas antes de añadirlo al carrito.
+**Prueba de aceptación:**
+
+* Comprobar que para cualquier producto (sellado, accesorio o carta suelta) se visualizan correctamente el nombre, el precio actual, el stock disponible y la imagen.
+* Verificar que, si el producto es de tipo "Carta suelta", se muestran adicionalmente los datos asociados de la carta del catálogo, su estado de conservación y su idioma.
+* Comprobar que, si el producto es "Sellado" o "Accesorio", los campos exclusivos de carta suelta no se muestran en la vista.
+
+**RF-03: Listado de expansiones (Sets)**
+**Como** coleccionista o jugador competitivo **quiero** listar las expansiones ordenadas por fecha de lanzamiento y poder filtrar las que son legales en torneos **para** conocer la cronología de las colecciones e identificar qué sets puedo usar en el formato competitivo actual.
+**Prueba de aceptación:**
+
+* Comprobar que el listado general de expansiones aparece ordenado cronológicamente por su fecha de lanzamiento.
+* Verificar que al activar el filtro de "Legal en torneos", el sistema devuelve únicamente las expansiones cuyo atributo booleano de legalidad sea verdadero (`True`).
+
+---
+
+**RF-04: Cartas del catálogo por expansión**
+**Como** coleccionista o jugador **quiero** listar todas las cartas pertenecientes a una expansión concreta, ordenadas por su número de colección y filtradas por rareza o tipo de energía **para** explorar el contenido del set o buscar piezas específicas para mis mazos.
+**Prueba de aceptación:**
+
+* Verificar que al seleccionar una expansión solo se listan las cartas vinculadas a dicha colección, ordenadas numéricamente por su número de colección (ej. 001/165, 002/165...).
+* Comprobar que al aplicar el filtro de rareza (ej. "Ilustración Especial") o de tipo de energía (ej. "Fuego"), la lista se reduce únicamente a las cartas que coinciden con dichos criterios.
+---
+
+**RF-05: Consulta de carpeta de usuario (Inventario)**
+**Como** usuario registrado **quiero** consultar la carpeta de un entrenador viendo todas sus cartas registradas con su estado de conservación, idioma y disponibilidad de tradeo **para** gestionar mi propia colección o explorar las cartas que otros usuarios poseen.
+**Prueba de aceptación:**
+
+* Comprobar que al acceder a la carpeta de un usuario se listan todas las instancias físicas de cartas asociadas a su identificador.
+* Verificar que cada registro de la lista muestra claramente el nombre de la carta, su estado de conservación (Mint, Near Mint, etc.), su idioma y el indicador de si está disponible para intercambio.
+
+---
+
+**RF-06: Búsqueda de ejemplares para tradeo**
+**Como** usuario registrado **quiero** seleccionar una carta del catálogo y listar todos los ejemplares físicos que otros usuarios tienen disponibles para tradeo, viendo el nombre y reputación de su dueño ordenados por mejor reputación **para** proponer un intercambio al usuario más fiable.
+**Prueba de aceptación:**
+
+* Verificar que dada una carta del catálogo, el listado muestra únicamente ejemplares de usuarios que tengan el atributo `Disponible_Para_Tradeo = True`.
+* Comprobar que cada ejemplar listado incluye el nombre del propietario actual, su puntuación de reputación, el estado de conservación de la carta y su idioma.
+* Verificar que los resultados aparecen ordenados de forma descendente según la puntuación de reputación del dueño (de 5 a 1 estrellas).
+
+---
+
+**RF-07: Historial de pedidos de un usuario**
+**Como** cliente registrado **quiero** listar todos mis pedidos realizados ordenados por fecha, visualizando el importe total y el estado actual **para** llevar un control de mis compras y hacer seguimiento de mis envíos.
+**Prueba de aceptación:**
+
+* Comprobar que el usuario solo visualiza los pedidos asociados a su cuenta, ordenados desde el más reciente al más antiguo según la fecha de compra.
+* Verificar que en cada fila del listado se muestra el identificador del pedido, la fecha, el importe total y el estado (Pagado, Enviado, Entregado).
+
+
+---
+
+**RF-08: Detalle de un pedido**
+**Como** cliente registrado **quiero** consultar el desglose completo de un pedido (líneas de pedido, productos, cantidades, precios unitarios y total) **para** revisar la factura y verificar qué artículos exactos compré y a qué precio.
+**Prueba de aceptación:**
+
+* Verificar que al seleccionar un pedido se muestran todas sus líneas de detalle con el nombre del producto, la cantidad comprada y el precio unitario aplicado en el momento de la compra.
+* Comprobar que la suma de los subtotales de cada línea (cantidad × precio unitario) coincide exactamente con el importe total reflejado en la cabecera del pedido.
+
+
+---
+
+**RF-09: Listado de intercambios (Tradeos)**
+**Como** usuario registrado **quiero** listar mis intercambios separando las ofertas que he propuesto de las que he recibido, y pudiendo filtrar por estado **para** gestionar eficazmente mis negociaciones pendientes y revisar mi historial de tratos.
+**Prueba de aceptación:**
+
+* Comprobar que la vista permite alternar o separar claramente los intercambios donde el usuario actúa como `Usuario_Ofertante` (propuestos) de aquellos donde actúa como `Usuario_Receptor` (recibidos).
+* Verificar que al seleccionar un estado en el filtro (ej. "Pendiente", "Aceptado", "Completado"), la lista se actualiza mostrando solo los intercambios en dicha situación.
+
+
+---
+
+**RF-10: Detalle de un intercambio**
+**Como** usuario participante en un trato **quiero** consultar toda la información detallada de un intercambio (participantes, cartas aportadas por cada parte, estado, fecha, códigos de seguimiento postal y valoraciones) **para** verificar las condiciones del acuerdo, seguir el envío de las cartas y calificar la experiencia.
+**Prueba de aceptación:**
+
+* Verificar que la vista de detalle muestra los nombres de ambos participantes (ofertante y receptor), la fecha de creación y el estado actual del intercambio.
+* Comprobar que las cartas físicas incluidas en el trato aparecen agrupadas y diferenciadas claramente según a qué participante pertenecen originalmente.
+* Verificar que, si el intercambio está en estado "Enviado" o "Completado", se visualizan los códigos de *tracking* de ambos envíos y las valoraciones otorgadas entre los usuarios.
+
 #### R.F.01. Título requisito funcional
 
 Como [tipo de usuario]
