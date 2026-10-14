@@ -34,7 +34,6 @@ Atributos: ID_Pedido, ID_Usuario (Clave Foránea), Fecha, Total, Estado (Pagado,
 
 Relación: Se conecta a los Productos_Tienda mediante una tabla intermedia Detalle_Pedido (clásica de e-commerce).
 
-Módulo de Catálogo TCG
 ### 4. Expansión (Set):
 
 Atributos: ID_Expansion, Nombre (ej. "151", "Corona Estelar"), Fecha_Lanzamiento, Icono_Set, Legal_En_Torneos (Booleano).
@@ -44,9 +43,6 @@ Atributos: ID_Expansion, Nombre (ej. "151", "Corona Estelar"), Fecha_Lanzamiento
 Atributos: ID_Carta, ID_Expansion (Clave Foránea), Nombre (ej. "Charizard ex"), Número_Colección (ej. "199/165"), Rareza (Común, Rara, Ilustración Especial), Tipo_Energía, URL_Imagen.
 
 Nota: Esta tabla es un "diccionario" inmutable. Representa todas las cartas que existen en el juego, no a quién pertenecen.
-
-Módulo de Tradeo (Intercambio entre Usuarios)
-Para que los usuarios puedan tradear, necesitan poder subir las cartas que tienen repetidas o que no quieren.
 
 ### 6. Carta_Usuario (Inventario/Carpeta):
 
