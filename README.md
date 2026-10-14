@@ -13,49 +13,49 @@
 
 ## 2. Glosario de términos
 
--1. Usuario (Entrenador):
+### 1. Usuario (Entrenador):
 
 Atributos: ID_Usuario, Nombre, Email, Contraseña, Dirección_Envío, Reputación_Tradeo (puntuación de 1 a 5 estrellas basada en intercambios exitosos), Saldo_Monedero.
 
-2. Producto_Tienda:
+### 2. Producto_Tienda:
 
 Atributos: ID_Producto, Nombre (ej. "Caja de Sobres Evoluciones en Paldea", "Funda de Pikachu"), Tipo (Sellado, Accesorio, Carta Suelta), Precio, Stock, Imagen.
 
 Nota: Aquí está el inventario oficial que la tienda vende directamente.
 
-3. Pedido:
+### 3. Pedido:
 
 Atributos: ID_Pedido, ID_Usuario (Clave Foránea), Fecha, Total, Estado (Pagado, Enviado, Entregado).
 
 Relación: Se conecta a los Productos_Tienda mediante una tabla intermedia Detalle_Pedido (clásica de e-commerce).
 
- Módulo de Catálogo TCG
-4. Expansión (Set):
+Módulo de Catálogo TCG
+### 4. Expansión (Set):
 
 Atributos: ID_Expansion, Nombre (ej. "151", "Corona Estelar"), Fecha_Lanzamiento, Icono_Set, Legal_En_Torneos (Booleano).
 
-5. Carta_Catálogo:
+### 5. Carta_Catálogo:
 
 Atributos: ID_Carta, ID_Expansion (Clave Foránea), Nombre (ej. "Charizard ex"), Número_Colección (ej. "199/165"), Rareza (Común, Rara, Ilustración Especial), Tipo_Energía, URL_Imagen.
 
 Nota: Esta tabla es un "diccionario" inmutable. Representa todas las cartas que existen en el juego, no a quién pertenecen.
 
- Módulo de Tradeo (Intercambio entre Usuarios)
+Módulo de Tradeo (Intercambio entre Usuarios)
 Para que los usuarios puedan tradear, necesitan poder subir las cartas que tienen repetidas o que no quieren.
 
-6. Carta_Usuario (Inventario/Carpeta):
+### 6. Carta_Usuario (Inventario/Carpeta):
 
 Atributos: ID_Carta_Fisica, ID_Usuario (Dueño actual), ID_Carta_Catalogo (Qué carta es), Estado_Conservación (Mint, Near Mint, Lightly Played, Damaged), Idioma, Disponible_Para_Tradeo (Booleano).
 
 Nota: Esta es la instancia física real de la carta. Si un usuario tiene 3 Pikachus iguales, habrá 3 registros en esta tabla asignados a su ID.
 
-7. Intercambio (Trade_Request):
+### 7. Intercambio (Trade_Request):
 
 Atributos: ID_Intercambio, ID_Usuario_Ofertante, ID_Usuario_Receptor, Estado_Tradeo (Pendiente, Aceptado, Rechazado, Enviado, Completado, Disputa), Fecha_Creación, Tracking_Ofertante (Código de envío postal), Tracking_Receptor.
 
 Nota: Es la "cabecera" de la propuesta. Fulanito le propone un trato a Menganito.
 
-8. Detalle_Intercambio (Trade_Items):
+### 8. Detalle_Intercambio (Trade_Items):
 
 Atributos: ID_Detalle_Tradeo, ID_Intercambio (Clave Foránea), ID_Carta_Fisica (Clave Foránea).
 
