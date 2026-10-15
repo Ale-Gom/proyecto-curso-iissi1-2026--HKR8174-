@@ -111,60 +111,48 @@ RG-03 – Gestión de intercambios. El sistema deberá permitir a los usuarios p
 
 ### 4.1. Requisitos funcionales
 
-#### R.F.01. Catálogo de productos de la tienda
+#### RF-01: Catálogo de productos de la tienda
 
 Como cliente o visitante de la tienda quiero listar los productos disponibles filtrando por tipo (sellado, accesorio o carta suelta) y rango de precio, y ordenándolos por coste para encontrar artículos que se ajusten a mis intereses y presupuesto.
 
----
+#### RF-02: Detalle de un producto
 
-**RF-02: Detalle de un producto**
-**Como** cliente o visitante **quiero** consultar la ficha detallada de un producto (nombre, precio, stock, imagen y, si es carta suelta, sus datos de catálogo, estado e idioma) **para** evaluar sus características exactas antes de añadirlo al carrito.
+Como cliente o visitante quiero consultar la ficha detallada de un producto (nombre, precio, stock, imagen y, si es carta suelta, sus datos de catálogo, estado e idioma) para evaluar sus características exactas antes de añadirlo al carrito.
 
----
+#### RF-03: Listado de expansiones (Sets)
 
-**RF-03: Listado de expansiones (Sets)**
-**Como** coleccionista o jugador competitivo **quiero** listar las expansiones ordenadas por fecha de lanzamiento y poder filtrar las que son legales en torneos **para** conocer la cronología de las colecciones e identificar qué sets puedo usar en el formato competitivo actual.
+Como coleccionista o jugador competitivo quiero listar las expansiones ordenadas por fecha de lanzamiento y poder filtrar las que son legales en torneos para conocer la cronología de las colecciones e identificar qué sets puedo usar en el formato competitivo actual.
 
----
+#### RF-04: Cartas del catálogo por expansión
 
-**RF-04: Cartas del catálogo por expansión**
-**Como** coleccionista o jugador **quiero** listar todas las cartas pertenecientes a una expansión concreta, ordenadas por su número de colección y filtradas por rareza o tipo de energía **para** explorar el contenido del set o buscar piezas específicas para mis mazos.
+Como coleccionista o jugador quiero listar todas las cartas pertenecientes a una expansión concreta, ordenadas por su número de colección y filtradas por rareza o tipo de energía para explorar el contenido del set o buscar piezas específicas para mis mazos.
 
----
+#### RF-05: Consulta de carpeta de usuario (Inventario)
+Como usuario registrado quiero consultar la carpeta de un entrenador viendo todas sus cartas registradas con su estado de conservación, idioma y disponibilidad de tradeo para gestionar mi propia colección o explorar las cartas que otros usuarios poseen.
 
-**RF-05: Consulta de carpeta de usuario (Inventario)**
-**Como** usuario registrado **quiero** consultar la carpeta de un entrenador viendo todas sus cartas registradas con su estado de conservación, idioma y disponibilidad de tradeo **para** gestionar mi propia colección o explorar las cartas que otros usuarios poseen.
+#### RF-06: Búsqueda de ejemplares para tradeo
 
----
+Como usuario registrado quiero seleccionar una carta del catálogo y listar todos los ejemplares físicos que otros usuarios tienen disponibles para tradeo, viendo el nombre y reputación de su dueño ordenados por mejor reputación para proponer un intercambio al usuario más fiable.
 
-**RF-06: Búsqueda de ejemplares para tradeo**
-**Como** usuario registrado **quiero** seleccionar una carta del catálogo y listar todos los ejemplares físicos que otros usuarios tienen disponibles para tradeo, viendo el nombre y reputación de su dueño ordenados por mejor reputación **para** proponer un intercambio al usuario más fiable.
+#### RF-07: Historial de pedidos de un usuario
 
----
+Como cliente registrado quiero listar todos mis pedidos realizados ordenados por fecha, visualizando el importe total y el estado actual para llevar un control de mis compras y hacer seguimiento de mis envíos.
 
-**RF-07: Historial de pedidos de un usuario**
-**Como** cliente registrado **quiero** listar todos mis pedidos realizados ordenados por fecha, visualizando el importe total y el estado actual **para** llevar un control de mis compras y hacer seguimiento de mis envíos.
+#### RF-08: Detalle de un pedido
 
----
+Como cliente registrado quiero consultar el desglose completo de un pedido (líneas de pedido, productos, cantidades, precios unitarios y total) para revisar la factura y verificar qué artículos exactos compré y a qué precio.
 
-**RF-08: Detalle de un pedido**
-**Como** cliente registrado **quiero** consultar el desglose completo de un pedido (líneas de pedido, productos, cantidades, precios unitarios y total) **para** revisar la factura y verificar qué artículos exactos compré y a qué precio.
+#### RF-09: Listado de intercambios (Tradeos)
 
----
+Como usuario registrado quiero listar mis intercambios separando las ofertas que he propuesto de las que he recibido, y pudiendo filtrar por estado para gestionar eficazmente mis negociaciones pendientes y revisar mi historial de tratos.
 
-**RF-09: Listado de intercambios (Tradeos)**
-**Como** usuario registrado **quiero** listar mis intercambios separando las ofertas que he propuesto de las que he recibido, y pudiendo filtrar por estado **para** gestionar eficazmente mis negociaciones pendientes y revisar mi historial de tratos.
+#### RF-10: Detalle de un intercambio
 
-
----
-
-**RF-10: Detalle de un intercambio**
-**Como** usuario participante en un trato **quiero** consultar toda la información detallada de un intercambio (participantes, cartas aportadas por cada parte, estado, fecha, códigos de seguimiento postal y valoraciones) **para** verificar las condiciones del acuerdo, seguir el envío de las cartas y calificar la experiencia.
-
+Como usuario participante en un trato quiero consultar toda la información detallada de un intercambio (participantes, cartas aportadas por cada parte, estado, fecha, códigos de seguimiento postal y valoraciones) para verificar las condiciones del acuerdo, seguir el envío de las cartas y calificar la experiencia.
 
 #### 4.1.1. Requisitos de información
 
-**R.I.01. Información de los usuarios**
+**RI-01: Información de los usuarios**
 Como administrador quiero que el sistema almacene la información de los entrenadores registrados (nombre, email, contraseña, dirección de envío, saldo de monedero y reputación de tradeo) para poder identificarlos, enviarles sus pedidos y gestionar sus intercambios.
 
 **R.I.02. Información de los productos de la tienda**
