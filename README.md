@@ -205,6 +205,7 @@ Como entrenador quiero que el sistema almacene la valoración que cada participa
 
 ##### R.N.01. Stock suficiente
 La cantidad de un producto en una línea de pedido no puede superar el stock disponible de ese producto en el momento de la compra. Al pagar el pedido, el stock se reduce en esa cantidad.
+
 Prueba de aceptación
 
 * Se comprueba que se puede crear un pedido cuando la cantidad pedida es menor o igual que el stock disponible.
@@ -215,6 +216,7 @@ Prueba de aceptación
 
 ##### R.N.02. Participantes y cartas válidos en un intercambio
 El ofertante y el receptor de un intercambio deben ser usuarios distintos. Toda carta incluida debe pertenecer a uno de los dos, y cada uno debe aportar al menos una carta.
+
 Prueba de aceptación
 
 * Se comprueba que el sistema no permite que un usuario se proponga un intercambio a sí mismo.
@@ -224,6 +226,7 @@ Prueba de aceptación
 
 ##### R.N.03. Bloqueo de cartas en intercambio
 Solo se pueden añadir a un intercambio cartas marcadas como disponibles para tradeo. Mientras el intercambio esté pendiente, aceptado o enviado, sus cartas pasan a no disponibles y no pueden incluirse en otro intercambio. Si el intercambio se rechaza, vuelven a estar disponibles.
+
 Prueba de aceptación
 
 * Se comprueba que el sistema no permite incluir en un intercambio una carta marcada como no disponible para tradeo.
@@ -234,6 +237,7 @@ Prueba de aceptación
 
 ##### R.N.04. Transferencia de propiedad al completar un intercambio
 Cuando un intercambio pasa a completado, cada carta pasa a ser propiedad del otro participante. Un intercambio solo puede marcarse como completado si ambos códigos de envío están registrados.
+
 Prueba de aceptación
 
 * Se comprueba que el sistema no permite marcar como completado un intercambio al que le falta alguno de los dos códigos de envío.
@@ -245,7 +249,7 @@ Prueba de aceptación
 ##### R.N.05. Valoraciones y reputación
 Cada participante solo puede valorar al otro, con una puntuación de 1 a 5, una vez el intercambio esté completado. La reputación de un usuario es la media de las valoraciones que ha recibido.
 
-Prueba de aceptación:
+Prueba de aceptación
 
 * Se comprueba que el sistema no permite valorar un intercambio que no está en estado completado.
 * Se comprueba que el sistema rechaza valoraciones menores que 1 o mayores que 5.
