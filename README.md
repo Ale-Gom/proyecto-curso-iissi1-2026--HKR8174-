@@ -69,21 +69,11 @@ Nota: Aquí se meten las cartas de la tabla Carta_Usuario que están en juego en
 
 ### 3.1. Requisitos generales
 
-RG-01 – Gestión de usuarios. El sistema deberá permitir registrar y gestionar a los usuarios (entrenadores), con sus datos personales, su dirección de envío, su saldo de monedero y su reputación de tradeo.
+RG-01 – Gestión de usuarios. El sistema deberá permitir registrar y gestionar a los usuarios (entrenadores), con sus datos personales, su dirección de envío, su saldo de monedero, su reputación de tradeo y su colección personal de cartas.
 
-RG-02 – Gestión de la tienda online. El sistema deberá gestionar los productos que vende la tienda (producto sellado, accesorios y cartas sueltas), con su precio y su stock siempre actualizados.
+RG-02 – Gestión de la tienda online. El sistema deberá gestionar los productos que vende la tienda (producto sellado, accesorios y cartas sueltas), con su precio, su stock, el catálogo de referencia y los pedidos de los usuarios siempre actualizados.
 
-RG-03 – Gestión de pedidos. El sistema deberá permitir a los usuarios comprar productos de la tienda y registrar cada pedido con sus líneas, su total y su estado (pagado, enviado o entregado).
-
-RG-04 – Gestión del catálogo de cartas. El sistema deberá mantener un catálogo de referencia con todas las expansiones y las cartas que contienen, indicando qué expansiones son legales en torneo.
-
-RG-05 – Gestión de la colección personal. El sistema deberá permitir a cada usuario registrar sus cartas físicas en una carpeta virtual, indicando la carta del catálogo, su estado de conservación, su idioma y si está disponible para intercambio.
-
-RG-06 – Gestión de intercambios. El sistema deberá permitir a los usuarios proponer, aceptar o rechazar intercambios de cartas con otros usuarios, y hacer su seguimiento hasta completarlos, incluyendo los códigos de envío.
-
-RG-07 – Gestión de la confianza. El sistema deberá permitir que los usuarios se valoren tras completar un intercambio, y calcular con esas valoraciones la reputación de cada usuario.
-
-RG-08 – Administración. El sistema deberá permitir al administrador de la tienda gestionar el catálogo, los productos y los pedidos, y mediar en los intercambios que acaben en disputa.
+RG-03 – Gestión de intercambios. El sistema deberá permitir a los usuarios proponer, aceptar o rechazar intercambios de cartas con otros usuarios, hacer su seguimiento hasta completarlos, incluyendo los códigos de envío, y realizar una valoración posterior para calcular la reputación del otro usuario.
 
 ### 3.2. Usuarios del sistema
 
@@ -196,10 +186,6 @@ Como entrenador quiero que el sistema almacene las cartas físicas que tengo (qu
 
 **R.I.07. Información de los intercambios**
 Como entrenador quiero que el sistema almacene los intercambios que propongo o recibo (fecha de creación, estado, cartas incluidas, usuario ofertante, usuario receptor y códigos de envío de cada parte) para poder seguir cada trato hasta completarlo.
-
-**R.I.08. Información de las valoraciones de los intercambios**
-Como entrenador quiero que el sistema almacene la valoración que cada participante da al otro en un intercambio para saber si un usuario es de fiar antes de tradear con él.
-
 
 #### 4.1.2. Reglas de negocio
 
