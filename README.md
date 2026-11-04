@@ -254,19 +254,117 @@ para [razón]
 
 ## 6. Matrices de trazabilidad
 
-- Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
+Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos de información (RI), las reglas de negocio (RN) y los requisitos funcionales (RF).
 
-|       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
-|:------|:-----------|:-----------|:-----------|:-----------|
-| RI-1  | X          | X          | X          | X          |
-| RI-2  |            | X          |            | X          |
-| RF-1  |            | X          |            | X          |
-| RF-2  | X          |            | X          | X          |
-| RN-1  |            | X          |            |            |
-| RN-2  | X          | X          | X          |            |
-| ...   |            |            |            |            |
+### 6.1. Requisitos / Entidades
 
--- fin entregable 2 --
+|        | Usuario | ProductoTienda | Sellado | Accesorio | CartaSuelta | Pedido | LineaPedido | Expansion | CartaCatalogo | CartaUsuario | Intercambio |
+|:-------|:-------:|:--------------:|:-------:|:---------:|:-----------:|:------:|:-----------:|:---------:|:-------------:|:------------:|:-----------:|
+| RI-01  | X       |                |         |           |             |        |             |           |               |              |             |
+| RI-02  |         | X              | X       | X         | X           |        |             |           |               |              |             |
+| RI-03  | X       | X              |         |           |             | X      | X           |           |               |              |             |
+| RI-04  |         |                |         |           |             |        |             | X         |               |              |             |
+| RI-05  |         |                |         |           |             |        |             | X         | X             |              |             |
+| RI-06  | X       |                |         |           |             |        |             |           | X             | X            |             |
+| RI-07  | X       |                |         |           |             |        |             |           |               | X            | X           |
+| RI-08  | X       |                |         |           |             |        |             |           |               |              | X           |
+| RN-01  |         | X              |         |           |             | X      | X           |           |               |              |             |
+| RN-02  | X       |                |         |           |             |        |             |           |               | X            | X           |
+| RN-03  |         |                |         |           |             |        |             |           |               | X            | X           |
+| RN-04  | X       |                |         |           |             |        |             |           |               | X            | X           |
+| RN-05  | X       |                |         |           |             |        |             |           |               |              | X           |
+| RF-01  |         | X              | X       | X         | X           |        |             |           |               |              |             |
+| RF-02  |         | X              | X       | X         | X           |        |             |           | X             |              |             |
+| RF-03  |         |                |         |           |             |        |             | X         |               |              |             |
+| RF-04  |         |                |         |           |             |        |             | X         | X             |              |             |
+| RF-05  | X       |                |         |           |             |        |             |           | X             | X            |             |
+| RF-06  | X       |                |         |           |             |        |             |           | X             | X            |             |
+| RF-07  | X       |                |         |           |             | X      |             |           |               |              |             |
+| RF-08  |         | X              |         |           |             | X      | X           |           |               |              |             |
+| RF-09  | X       |                |         |           |             |        |             |           |               |              | X           |
+| RF-10  | X       |                |         |           |             |        |             |           | X             | X            | X           |
+
+### 6.2. Requisitos / Asociaciones
+
+| Código | Asociación |
+|:-------|:-----------|
+| A1  | Usuario `realiza` Pedido |
+| A2  | Pedido ◆ LineaPedido (composición) |
+| A3  | LineaPedido `incluye` ProductoTienda |
+| A4  | Generalización ProductoTienda → Sellado, Accesorio, CartaSuelta |
+| A5  | Sellado `perteneceA` Expansion |
+| A6  | CartaSuelta `esEjemplarDe` CartaCatalogo |
+| A7  | Expansion ◆ CartaCatalogo (composición) |
+| A8  | Usuario `posee` CartaUsuario |
+| A9  | CartaUsuario `esEjemplarDe` CartaCatalogo |
+| A10 | Usuario (ofertante) `propone` Intercambio |
+| A11 | Usuario (receptor) `recibe` Intercambio |
+| A12 | Intercambio `incluye` CartaUsuario |
+
+|        | A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8 | A9 | A10 | A11 | A12 |
+|:-------|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:---:|:---:|:---:|
+| RI-01  |    |    |    |    |    |    |    |    |    |     |     |     |
+| RI-02  |    |    |    | X  | X  | X  |    |    |    |     |     |     |
+| RI-03  | X  | X  | X  |    |    |    |    |    |    |     |     |     |
+| RI-04  |    |    |    |    |    |    |    |    |    |     |     |     |
+| RI-05  |    |    |    |    |    |    | X  |    |    |     |     |     |
+| RI-06  |    |    |    |    |    |    |    | X  | X  |     |     |     |
+| RI-07  |    |    |    |    |    |    |    |    |    | X   | X   | X   |
+| RI-08  |    |    |    |    |    |    |    |    |    | X   | X   |     |
+| RN-01  |    | X  | X  |    |    |    |    |    |    |     |     |     |
+| RN-02  |    |    |    |    |    |    |    | X  |    | X   | X   | X   |
+| RN-03  |    |    |    |    |    |    |    |    |    |     |     | X   |
+| RN-04  |    |    |    |    |    |    |    | X  |    | X   | X   | X   |
+| RN-05  |    |    |    |    |    |    |    |    |    | X   | X   |     |
+| RF-01  |    |    |    | X  |    |    |    |    |    |     |     |     |
+| RF-02  |    |    |    | X  |    | X  |    |    |    |     |     |     |
+| RF-03  |    |    |    |    |    |    |    |    |    |     |     |     |
+| RF-04  |    |    |    |    |    |    | X  |    |    |     |     |     |
+| RF-05  |    |    |    |    |    |    |    | X  | X  |     |     |     |
+| RF-06  |    |    |    |    |    |    |    | X  | X  |     |     |     |
+| RF-07  | X  |    |    |    |    |    |    |    |    |     |     |     |
+| RF-08  |    | X  | X  |    |    |    |    |    |    |     |     |     |
+| RF-09  |    |    |    |    |    |    |    |    |    | X   | X   |     |
+| RF-10  |    |    |    |    |    |    |    |    | X  | X   | X   | X   |
+
+### 6.3. Requisitos / Restricciones
+
+| Código | Restricción |
+|:-------|:------------|
+| R1 | {stockSuficiente} La cantidad de una línea de pedido no supera el stock del producto |
+| R2 | {participantesYCartasValidos} Ofertante y receptor distintos; cada uno aporta al menos una carta propia |
+| R3 | {cartaBloqueada} Solo cartas disponibles; una carta no está en dos intercambios activos |
+| R4 | {valoracionYReputacion} Valoraciones de 1 a 5 solo en intercambios completados; reputación = media |
+| R5 | {totalPedido} total = Σ cantidad × precioUnitario |
+| R6 | {trackingParaCompletar} Un intercambio completado tiene los dos códigos de envío |
+| R7 | {completa, disjunta} Todo producto es exactamente de un tipo |
+
+|        | R1 | R2 | R3 | R4 | R5 | R6 | R7 |
+|:-------|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| RI-01  |    |    |    | X  |    |    |    |
+| RI-02  |    |    |    |    |    |    | X  |
+| RI-03  |    |    |    |    | X  |    |    |
+| RI-04  |    |    |    |    |    |    |    |
+| RI-05  |    |    |    |    |    |    |    |
+| RI-06  |    |    |    |    |    |    |    |
+| RI-07  |    | X  |    |    |    | X  |    |
+| RI-08  |    |    |    | X  |    |    |    |
+| RN-01  | X  |    |    |    |    |    |    |
+| RN-02  |    | X  |    |    |    |    |    |
+| RN-03  |    |    | X  |    |    |    |    |
+| RN-04  |    |    |    |    |    | X  |    |
+| RN-05  |    |    |    | X  |    |    |    |
+| RF-01  |    |    |    |    |    |    | X  |
+| RF-02  |    |    |    |    |    |    | X  |
+| RF-03  |    |    |    |    |    |    |    |
+| RF-04  |    |    |    |    |    |    |    |
+| RF-05  |    |    |    |    |    |    |    |
+| RF-06  |    |    | X  | X  |    |    |    |
+| RF-07  |    |    |    |    | X  |    |    |
+| RF-08  |    |    |    |    | X  |    |    |
+| RF-09  |    |    |    |    |    |    |    |
+| RF-10  |    |    |    | X  |    | X  |    |
+
 
 ## 7. Modelo relacional en 3FN
 
