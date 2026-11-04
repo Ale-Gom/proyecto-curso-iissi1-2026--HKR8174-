@@ -251,7 +251,24 @@ para [razón]
 
 ### 5.2. Escenarios de prueba
 
-- con descripción textual y diagrama de objetos UML.
+#### Compra válida:
+<img width="588" height="918" alt="escenario_prueba_TCG" src="https://github.com/user-attachments/assets/d53482ae-2eb5-42de-b938-891e0134d7a3" />
+
+#### Stock insuficiente:
+<img width="517" height="539" alt="escenario_prueba3_TCG" src="https://github.com/user-attachments/assets/8514dcc9-6132-4f8b-84c1-6d26c80eae97" />
+
+#### Intercambio pendiente:
+<img width="734" height="548" alt="image" src="https://github.com/user-attachments/assets/cd666405-dc9c-471b-aa62-bb8e7adeb8e7" />
+
+#### Carta en dos intercambios:
+<img width="956" height="354" alt="image" src="https://github.com/user-attachments/assets/5394273f-bee7-48b5-ac38-249c9cbb83e3" />
+
+#### Intercambio completado:
+<img width="730" height="674" alt="image" src="https://github.com/user-attachments/assets/635432f4-6932-4c79-a674-2ef49e075159" />
+
+#### Itercambio completado invalido:
+<img width="739" height="423" alt="image" src="https://github.com/user-attachments/assets/36779c0d-506e-4cab-8fc9-52e7cfd299ca" />
+
 
 ## 6. Matrices de trazabilidad
 
