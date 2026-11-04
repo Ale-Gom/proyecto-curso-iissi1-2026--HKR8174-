@@ -246,7 +246,8 @@ para [razón]
 
 ### 5.1. Diagramas de clases UML
 
-- con restricciones.
+<img width="791" height="853" alt="modelo_conceptual_TCG" src="https://github.com/user-attachments/assets/c73bcdb9-e8a3-4843-90b3-b22c4c06cf88" />
+
 
 ### 5.2. Escenarios de prueba
 
