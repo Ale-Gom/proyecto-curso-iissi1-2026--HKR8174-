@@ -272,7 +272,7 @@ para [razón]
 
 ## 6. Matrices de trazabilidad
 
-Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos de información (RI), las reglas de negocio (RN) y los requisitos funcionales (RF). Por legibilidad se divide en tres tablas con las mismas filas: entidades, asociaciones y restricciones.
+Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos de información (RI), las reglas de negocio (RN) y los requisitos funcionales (RF). Se divide en tres tablas con las mismas filas: entidades, asociaciones y restricciones.
 
 ### 6.1. Requisitos / Entidades
 
