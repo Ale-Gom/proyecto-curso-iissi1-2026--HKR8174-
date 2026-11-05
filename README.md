@@ -272,7 +272,7 @@ para [razón]
 
 ## 6. Matrices de trazabilidad
 
-Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos de información (RI), las reglas de negocio (RN) y los requisitos funcionales (RF).
+Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos de información (RI), las reglas de negocio (RN) y los requisitos funcionales (RF). Por legibilidad se divide en tres tablas con las mismas filas: entidades, asociaciones y restricciones.
 
 ### 6.1. Requisitos / Entidades
 
@@ -285,7 +285,6 @@ Matriz de trazabilidad entre los elementos del modelo conceptual y los requisito
 | RI-05  |         |                |         |           |             |        |             | X         | X             |              |             |
 | RI-06  | X       |                |         |           |             |        |             |           | X             | X            |             |
 | RI-07  | X       |                |         |           |             |        |             |           |               | X            | X           |
-| RI-08  | X       |                |         |           |             |        |             |           |               |              | X           |
 | RN-01  |         | X              |         |           |             | X      | X           |           |               |              |             |
 | RN-02  | X       |                |         |           |             |        |             |           |               | X            | X           |
 | RN-03  |         |                |         |           |             |        |             |           |               | X            | X           |
@@ -328,7 +327,6 @@ Matriz de trazabilidad entre los elementos del modelo conceptual y los requisito
 | RI-05  |    |    |    |    |    |    | X  |    |    |     |     |     |
 | RI-06  |    |    |    |    |    |    |    | X  | X  |     |     |     |
 | RI-07  |    |    |    |    |    |    |    |    |    | X   | X   | X   |
-| RI-08  |    |    |    |    |    |    |    |    |    | X   | X   |     |
 | RN-01  |    | X  | X  |    |    |    |    |    |    |     |     |     |
 | RN-02  |    |    |    |    |    |    |    | X  |    | X   | X   | X   |
 | RN-03  |    |    |    |    |    |    |    |    |    |     |     | X   |
@@ -366,7 +364,6 @@ Matriz de trazabilidad entre los elementos del modelo conceptual y los requisito
 | RI-05  |    |    |    |    |    |    |    |
 | RI-06  |    |    |    |    |    |    |    |
 | RI-07  |    | X  |    |    |    | X  |    |
-| RI-08  |    |    |    | X  |    |    |    |
 | RN-01  | X  |    |    |    |    |    |    |
 | RN-02  |    | X  |    |    |    |    |    |
 | RN-03  |    |    | X  |    |    |    |    |
